@@ -1,0 +1,275 @@
+:root {
+  --color-background: #2F4858;
+  --true-white: #F1F1E6;
+  --yellow: #d9bb36;
+  --green: #2A9546;
+  --grey: #949492;
+  --red : #BF5847;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--color-background);
+  height: 100%;
+}
+
+#modal {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0,0,0,0.7);
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+#modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+
+  width: 32em;
+  height: 25em;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.1em;
+  font-family: 'Lato', sans-serif;
+
+  border-radius: 1em;
+
+  background: var(--true-white);
+}
+
+.info p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.info img {
+  width: 85%;
+  border-radius: 5px;
+  opacity: 0.9;
+  margin: 1em;
+}
+
+.info i, b {
+  font-size: 15px;
+}
+
+.dev {
+  margin: 15px;
+}
+
+.btnInfo {
+  border: none;
+  border-radius: 1em;
+  padding: 8px;
+
+  background: var(--color-background);
+  color: var(--true-white);
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+#jogo {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--true-white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 10px;
+}
+
+#panel {
+  background: var(--true-white);
+  min-height: 30px;
+  min-width: 335px;
+  padding: 10px;
+  border-radius: 0.5em;
+  align-items: center;
+  display: flex;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-family: 'Lato', sans-serif;
+}
+
+#board {
+  width: 350px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--true-white);
+  color: white;
+  font-family: 'Lato', sans-serif;
+  width: 61px;
+  height: 61px;
+  margin: 2.5px;
+}
+
+.contem {
+  background-color: var(--yellow);
+  color: white;
+  border-color: white;
+}
+
+.amarelo {
+  color: var(--yellow);
+}
+
+.certo {
+  background-color: var(--green);
+  border-color: white;
+  color: white;
+}
+
+.verde {
+  color: var(--green);
+}
+
+.naotem {
+  color: white;
+  border-color: white;
+  background-color: var(--grey);
+}
+
+.cinza {
+  color: var(--grey);
+}
+
+.keyboardRow {
+  width: 490px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.btnEnter {
+  color: var(--green);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  border: 1px solid lightgray;
+  background: var(--true-white);
+  display: flex;
+  width: 76px;
+  margin: 1px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.btnBack {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--red);
+  background: var(--true-white);
+  border: 1px solid lightgray;
+  display: flex;
+  margin: 1px;
+  height: 45px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.btnSquare {
+  color: white;
+  border: 1px solid var(--true-white);
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1px;
+  height: 45px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btnSquare:hover {
+  background: var(--true-white);
+  color: grey;
+  opacity: 0.8;
+}
+
+@keyframes giro1 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes giro2 {
+  from {
+    transform: rotateX(-90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.giro1 {
+  animation: giro1 250ms;
+  animation-fill-mode: forwards;
+}
+
+.giro2 {
+  animation: giro2 250ms;
+  animation-fill-mode: forwards;
+}

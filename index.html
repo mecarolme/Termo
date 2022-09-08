@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termo</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="index.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+
+    <div id="modal">
+      <div id="modal-container">
+        <div class="info">
+          <p>Descubra a palavra certa em 6 tentativas<br> A coloração das letras indica o quão perto <br> você está da
+            resposta certa!</p>
+          <img src="info.PNG" alt="img do game">
+          <p class="amarelo">Letras Amarelas indicam que a letra está na posição errada</p>
+          <p class="verde">Letras Verdes indicam que a letra está na posição correta</p>
+          <p class="cinza">Letras Cinzas indicam que a letra não existe</p>
+          <p class="dev"><i>Desenvolvido por</i> <b>Caroline Medeiros</b></p>
+          <button class="btnInfo" onclick="Modal.close()">ENTENDIDO!</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="jogo">
+      <header>
+        <h1 class="title">TERMO</h1>
+      </header>
+
+      <div id="panel">
+        <h2 id="resposta"></h2>
+      </div>
+
+      <div id="board-container">
+        <div id="board"></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
